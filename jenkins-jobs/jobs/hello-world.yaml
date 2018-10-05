@@ -10,5 +10,4 @@
       - shell: |
           #!/bin/bash -e
           echo "Hello world"
-    jobs:
-      - 'contrail-{project}'
+

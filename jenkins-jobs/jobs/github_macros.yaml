@@ -50,4 +50,4 @@
     name: atom-ci
     scm:
       - cspgithub:
-          repo: "juniper-ci"
+          repo: "atom-ci"

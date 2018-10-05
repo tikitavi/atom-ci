@@ -1,13 +1,13 @@
 - job-template:
-    name: Hello world
-    description: "Test job"
-    defaults: global
-    properties:
-      - build-discarder:
-          num-to-keep: 10
-      - atom-ci
+    name: hello-world
+    node: master
+    project-type: freestyle
+    logrotate:
+      numToKeep: 10
     builders:
       - shell: |
-          #!/bin/bash -e
           echo "Hello world"
-
+- project:
+    name: hello
+    jobs:
+      - 'hello-world'

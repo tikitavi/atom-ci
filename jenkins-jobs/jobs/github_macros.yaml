@@ -1,0 +1,53 @@
+# Open repository in specified organization
+- scm:
+    name: github
+    scm:
+      - git:
+          url: 'https://github.com/{organization}/{repo}.git'
+          basedir: '{repo}'
+          branches:
+            - '*/master'
+          clean:
+              after: true
+              before: true
+          prune: true
+          wipe-workspace: true
+          skip-tag: true
+
+# Open repository in specified organization at branch
+- scm:
+    name: github-branch
+    scm:
+      - git:
+          url: 'https://github.com/{organization}/{repo}.git'
+          basedir: '{repo}'
+          branches:
+            - '*/{branch}'
+          clean:
+              after: true
+              before: true
+          prune: true
+          wipe-workspace: true
+          skip-tag: true
+
+# Repository in e-kuznetsov github
+- scm:
+    name: cspgithub
+    scm:
+      - git:
+          url: 'https://github.com/e-kuznetsov/{repo}.git'
+          basedir: '{repo}'
+          branches:
+            - '*/master'
+          clean:
+              after: true
+              before: true
+          prune: true
+          wipe-workspace: true
+          skip-tag: true
+
+- scm:
+    name: atom-ci
+    scm:
+      - cspgithub:
+          repo: "juniper-ci"

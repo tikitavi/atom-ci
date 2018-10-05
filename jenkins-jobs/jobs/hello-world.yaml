@@ -1,0 +1,14 @@
+- job-template:
+    name: Hello world
+    description: "Test job"
+    defaults: global
+    properties:
+      - build-discarder:
+          num-to-keep: 10
+      - atom-ci
+    builders:
+      - shell: |
+          #!/bin/bash -e
+          echo "Hello world"
+    jobs:
+      - 'contrail-{project}'

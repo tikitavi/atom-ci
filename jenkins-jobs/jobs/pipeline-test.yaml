@@ -5,6 +5,5 @@
     pipeline-scm:
       scm:
         - atom-ci
-            clean: true
       script-path: pipeline-jobs/pipeline-test/Jenkinsfile
       lightweight-checkout: true
